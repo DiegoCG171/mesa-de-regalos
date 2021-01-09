@@ -1,8 +1,16 @@
 import React from 'react';
 import { FaGifts } from 'react-icons/fa';
-import { LoginForm } from '../components/LoginForm';
+import { useDispatch } from 'react-redux';
+import { startLoginGoogle } from '../../actions/auth';
+import { LoginForm } from '../../components/auth/LoginForm';
 
 export const LoginScreen = () => {
+
+    const dispatch = useDispatch();
+    const handleGoogle = () => {
+        dispatch( startLoginGoogle() );
+    }
+
     return (
         <main className='auth'>
             <div className='auth-container'>
@@ -15,7 +23,9 @@ export const LoginScreen = () => {
                     <LoginForm />
                     <p>o inicia sesión</p>
                     <div className='auth-social' >
-                        <button id='facebook'>Facebook</button>
+                        <button 
+                        onClick={ handleGoogle }
+                        id='facebook'>Google</button>
                     </div>
                 </div>
             </div>

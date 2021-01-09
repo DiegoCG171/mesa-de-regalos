@@ -1,12 +1,21 @@
 import React from 'react'
-import { useForm } from '../hooks/useForm'
+import { useDispatch } from 'react-redux';
+import { login } from '../../actions/auth';
+import { useForm } from '../../hooks/useForm';
 
 export const LoginForm = () => {
 
+    const dispatch = useDispatch();
     const [ { email, password }, handleInputChange ] = useForm({
         email: '',
         password: ''
     });
+
+    const handleSubmit = (ev) => {
+        ev.preventDefault();
+        console.log('form')
+        dispatch(login('123128123','Ulises'));
+    }
 
     return (
         <form className='form'>
@@ -26,7 +35,12 @@ export const LoginForm = () => {
                 value={password}
                 onChange={handleInputChange} 
                 />
-            <button>Login</button>
+            <button
+                type='submit'
+                onClick={handleSubmit}
+            >
+                Login
+            </button>
         </form>
 
     )

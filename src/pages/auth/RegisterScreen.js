@@ -1,6 +1,7 @@
 import React from 'react';
 import { FaGifts } from 'react-icons/fa';
-import { RegisterForm } from '../components/RegisterForm';
+import { RegisterForm } from '../../components/auth/RegisterForm';
+
 
 export const RegisterScreen = () => {
     return (
