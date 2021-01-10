@@ -1,0 +1,73 @@
+.main {
+    background-image: url("../../assets/img/auth-bg.jpg");
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    height: 100vh;
+
+    .main-container {
+        align-items: center;
+        background-color: rgba(9, 60, 75, 0.87);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100vh;
+
+        .main-logo {
+            align-items: center;
+            color: #f2f2f2;
+            display: flex;
+            font-size: 1.6rem;
+            font-weight: 500;
+            justify-self: start;
+            left: 0;
+            padding: 0 30px;
+            position: absolute;
+            top: 0;
+            transform: translate(30%, 50%);
+
+            .main-icon {
+                margin-left: 0.4rem;
+                font-size: 2rem;
+            }
+        }
+
+        .main-header {
+            display: flex;
+            color: #f2f2f2;
+            text-align: center;
+            font-size: 2rem;
+        }
+
+        .main-buttons {
+            display: flex;
+            flex-direction: column;
+            margin-top: 2rem;
+            width: 30%;
+
+            .button-main {
+                align-items: center;    
+                // background: #0379a5;
+                background: #03ADE2;
+                border: none;
+                border-radius: 20px;
+                color: #f2f2f2;
+                cursor: pointer;
+                display: flex; 
+                font-size: 1.4rem;
+                justify-content: center;           
+                margin-top: 1rem;
+                outline: none;
+                padding: 14px 26px;
+                text-decoration: none;
+                width: 100%;
+
+                .btn-icon {
+                    align-self: flex-end;
+                    margin-left: 1rem;
+                    font-size: 2.3rem;
+                }
+            }
+        }
+    }
+}
