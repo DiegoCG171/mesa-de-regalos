@@ -1,6 +1,6 @@
 import React from 'react'
 import { useDispatch } from 'react-redux';
-import { login, startLoginWhithEmailAndPassword } from '../../actions/auth';
+import { startLoginWhithEmailAndPassword } from '../../actions/auth';
 import { useForm } from '../../hooks/useForm';
 
 export const LoginForm = () => {
