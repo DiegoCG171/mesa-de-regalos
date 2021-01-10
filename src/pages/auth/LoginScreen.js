@@ -1,6 +1,7 @@
-import React from 'react';
+import React from 'react'; 
 import { FaGifts } from 'react-icons/fa';
 import { useDispatch } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { startLoginGoogle } from '../../actions/auth';
 import { LoginForm } from '../../components/auth/LoginForm';
 
@@ -26,6 +27,10 @@ export const LoginScreen = () => {
                         <button 
                         onClick={ handleGoogle }
                         id='facebook'>Google</button>
+                    </div>
+                    <div className='auth-link-container'>
+                        <p>¿No tienes cuenta?</p>
+                        <Link to='/auth/register' className='auth-link'>¡Registrate!</Link>
                     </div>
                 </div>
             </div>

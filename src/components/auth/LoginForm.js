@@ -1,6 +1,6 @@
 import React from 'react'
 import { useDispatch } from 'react-redux';
-import { login } from '../../actions/auth';
+import { login, startLoginWhithEmailAndPassword } from '../../actions/auth';
 import { useForm } from '../../hooks/useForm';
 
 export const LoginForm = () => {
@@ -14,7 +14,7 @@ export const LoginForm = () => {
     const handleSubmit = (ev) => {
         ev.preventDefault();
         console.log('form')
-        dispatch(login('123128123','Ulises'));
+        dispatch(startLoginWhithEmailAndPassword(email, password));
     }
 
     return (

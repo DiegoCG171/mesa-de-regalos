@@ -26,3 +26,24 @@ export const startLoginGoogle = () => {
 
     }
 }
+
+export const startLoginWhithEmailAndPassword = (email, password) =>{
+    return (dispatch) =>{
+        firebase.auth().signInWithEmailAndPassword(email, password)
+            .then(({user}) => {
+                dispatch(login(user.uid, user.displayName, user.photoURL));
+            });
+    }
+}
+
+export const startRegisterWhithEmailAndPassword = (email, name, password) => {
+    return (dispatch) => {
+        firebase.auth().createUserWithEmailAndPassword(email, password)
+            .then(async({user}) => {
+                await user.updateProfile({
+                    displayName: name,
+               })
+               dispatch(login(user.uid, user.displayName, user.photoURL));
+            });
+    }
+}
