@@ -1,12 +1,18 @@
 import React from 'react'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { FaGifts } from 'react-icons/fa';
 import { AiFillPlusCircle} from 'react-icons/ai'
 import { Link } from 'react-router-dom';
+import { startLogout } from '../../actions/auth';
 
 export const MainScreen = () => {
 
-    const { name } = useSelector(state => state.auth)
+    const { name } = useSelector(state => state.auth);
+    const dispatch = useDispatch();
+
+    const handleLogout = () => {
+        dispatch(startLogout());
+    }
 
     return (
         <div className='main'>
@@ -15,12 +21,17 @@ export const MainScreen = () => {
                     MR
                 <FaGifts className='main-icon'/>
                 </div>
+                <button  
+                    onClick={ handleLogout }
+                    className='main-logout'>
+                    Logout
+                </button>
                 <header className='main-header'>
                     <h1>¡Bienvenido {name} a tu Mesa de Regalos!</h1>
                 </header>
                 <div className='main-buttons'>
-                    <Link to='/' className='button-main'>Crear Wish List <AiFillPlusCircle className='btn-icon' /></Link>
-                    <Link to='/' className='button-main'>Ver mis Wish List's</Link> 
+                    <Link to='/info' className='button-main'>Crear Wish List <AiFillPlusCircle className='btn-icon' /></Link>
+                    <Link to='/mis-listas' className='button-main'>Ver mis Wish List's</Link> 
                 </div>
             </div>
         </div>

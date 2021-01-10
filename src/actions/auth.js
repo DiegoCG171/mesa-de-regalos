@@ -27,10 +27,10 @@ export const startLoginGoogle = () => {
     }
 }
 
-export const startLoginWhithEmailAndPassword = (email, password) =>{
-    return (dispatch) =>{
+export const startLoginWhithEmailAndPassword = (email, password) => {
+    return (dispatch) => {
         firebase.auth().signInWithEmailAndPassword(email, password)
-            .then(({user}) => {
+            .then(({ user }) => {
                 dispatch(login(user.uid, user.displayName, user.photoURL));
             });
     }
@@ -39,11 +39,23 @@ export const startLoginWhithEmailAndPassword = (email, password) =>{
 export const startRegisterWhithEmailAndPassword = (email, name, password) => {
     return (dispatch) => {
         firebase.auth().createUserWithEmailAndPassword(email, password)
-            .then(async({user}) => {
+            .then(async ({ user }) => {
                 await user.updateProfile({
                     displayName: name,
-               })
-               dispatch(login(user.uid, user.displayName, user.photoURL));
+                })
+                dispatch(login(user.uid, user.displayName, user.photoURL));
             });
     }
 }
+
+export const startLogout = () => {
+    return async(dispatch) => {
+        await firebase.auth().signOut();
+
+        dispatch(logout());
+    }
+}
+
+const logout = () => ({
+    type: types.logout
+})
