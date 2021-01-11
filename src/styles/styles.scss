@@ -2,7 +2,13 @@
 //CSS base
 @import './base/base';
 
+//components
+@import './components/navbar';
+@import './components/sidebar';
+@import './components/form';
+
 //pages
 @import './pages/loading';
 @import './pages/auth';
 @import './pages/main';
+@import './pages/info';
