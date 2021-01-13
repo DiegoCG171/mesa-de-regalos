@@ -2,9 +2,9 @@
     background-image: url('../../assets/img/sidebar-bg.jpeg');
     background-size: cover;
     display: flex;
-    height: 90vh;
+    height: 87.35vh;
+    width: 40%;
     
-
     .sidebar-container{
         align-items: center;
         background-color: rgba(9, 60, 75, 0.87);
@@ -14,8 +14,7 @@
         width: 100%;
 
         .sidebar-title{
-            color:#f2f2f2;
-            
+            color:#f2f2f2; 
         }
 
     }

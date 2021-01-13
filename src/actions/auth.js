@@ -1,5 +1,5 @@
 import { types } from "../types/types";
-import { firebase, googleProvider } from '../firestore/firebase-config';
+import { firebase, googleProvider } from '../firestore/firebase-config'; 
 
 
 export const login = (uid, displayName, photoURL) => {

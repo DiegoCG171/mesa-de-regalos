@@ -1,0 +1,143 @@
+.ws{
+    display: flex;
+    margin-top: 80px;
+
+    .wsf-container{
+        font-size: 1.5rem;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        padding: 30px;
+        width: 80%;
+    
+        .wsf-form-evento{     
+            display: flex;
+            flex-direction: column;
+
+            .titulo{
+                text-align: center;
+                margin-bottom: 30px;
+            }
+
+            .form-input{
+                background: #C4C4C4;
+                border: none;
+                border-radius: 4px;  
+                height: 38px;
+                margin-bottom: 20px;
+                padding: 8px 15px;
+                font-size: 1rem;
+                outline: none;
+                width: 500px;
+            }
+
+            .button {
+                font-size: 1.2rem;
+                color: #ffffff;
+                padding: 5px 20px;
+                margin-bottom: 5px;
+                border: 1px solid #545454;
+                border-radius: 4px;
+                background: #093C4B;
+                cursor: pointer;
+                outline: none;
+                text-decoration: none;
+                text-align: center;
+            }
+
+            .button-back{
+                font-size: 1.2rem;
+                color: #ffffff;
+                padding: 5px 20px;
+                margin-bottom: 15px;
+                border: 1px solid #545454;
+                border-radius: 4px;
+                background: #098bb3;
+                cursor: pointer;
+                outline: none;
+            }
+        }   
+
+        .wsf-form-contacto{
+            display: flex;
+            flex-direction: column;
+
+            .titulo{
+                text-align: center;
+                margin-bottom: 20px;
+            }
+
+            .form-input{
+                background: #C4C4C4;
+                border: none;
+                border-radius: 4px;  
+                height: 38px;
+                margin-bottom: 20px;
+                padding: 8px 15px;
+                font-size: 1rem;
+                outline: none;
+                width: 500px;
+            }
+
+            .input-small, .input-small-number{
+                font-size: 1.1rem;
+                
+                label{
+                    padding: 12px;
+                }
+                .label-fon{
+                   padding: 18px;
+                }
+
+                .form-input-small{
+                    background: #C4C4C4;
+                    border: none;
+                    border-radius: 4px;  
+                    height: 38px;
+                    margin-bottom: 20px;
+                    padding: 10px 15px;
+                    font-size: 1rem;
+                    outline: none;
+                    width: 150px;
+                }
+            }
+
+            .input-small-number{
+                margin-left: 18px;
+
+                label{
+                    padding: 15px;
+                }
+            }
+
+            button {
+                font-size: 1.2rem;
+                color: #ffffff;
+                padding: 5px 20px;
+                margin-bottom: 5px;
+                border: 1px solid #545454;
+                border-radius: 4px;
+                background: #093C4B;
+                cursor: pointer;
+                outline: none;
+                text-decoration: none;
+                text-align: center;
+            }
+
+            .button-back{
+                font-size: 1.2rem;
+                color: #ffffff;
+                padding: 5px 20px;
+                margin-bottom: 15px;
+                border: 1px solid #545454;
+                border-radius: 4px;
+                background: #098bb3;
+                cursor: pointer;
+                outline: none;
+                text-decoration: none;
+                text-align: center;
+            }
+        
+        }
+    }    
+}   
