@@ -14,7 +14,7 @@ export const LoginForm = () => {
     const handleSubmit = (ev) => {
         ev.preventDefault();
         console.log('form')
-        dispatch(startLoginWhithEmailAndPassword(email, password));
+        dispatch(startLoginWhithEmailAndPassword(email, password)); 
     }
 
     return (

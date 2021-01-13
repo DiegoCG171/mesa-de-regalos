@@ -8,7 +8,7 @@ export const login = (uid, displayName, photoURL) => {
         payload: {
             uid,
             displayName,
-            photoURL
+            photoURL 
         }
     }
 }
