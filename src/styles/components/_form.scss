@@ -6,8 +6,8 @@
         align-items: center;
         display: block;
         justify-content: center;
-        padding: 45px;
-        margin-top: 30px;
+        padding: 40px;
+        margin-top: 20px;
         width: 80%;
     
         .wsf-form-evento{   
@@ -115,6 +115,14 @@
                 outline: none;
                 text-decoration: none;
                 text-align: center;
+            }
+
+            .button-success{
+                opacity: 0.8;
+            }
+
+            .button-next{
+                background-color: green;
             }
 
         }

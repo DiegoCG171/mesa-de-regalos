@@ -1,10 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useDispatch } from 'react-redux';
+import { Link } from 'react-router-dom';
+import Swal from 'sweetalert2';
 import { registarWishList } from '../../actions/wishList';
 import { useForm } from '../../hooks/useForm';
 
+
 export const WishListInfoForm = ({history}) => {
     console.log(history);
+
+    const [Button, setButton] = useState(false);
 
     const dispatch = useDispatch();
     const [{nombre, tipoEvento, fecha, calle, colonia, cp, telefono, interior, exterior}, handleInputChange] = useForm({
@@ -23,8 +28,8 @@ export const WishListInfoForm = ({history}) => {
         ev.preventDefault();
         const InfoWishList = {nombre, tipoEvento, fecha, calle, colonia, cp, telefono, interior, exterior} 
         dispatch(registarWishList(InfoWishList));
-        
-        //history.replace('/lista-regalos');
+        Swal.fire("Guardado", "La información ha sido guardada de forma correcta", 'success');
+        setButton(true);
     }
 
     return (
@@ -120,10 +125,15 @@ export const WishListInfoForm = ({history}) => {
                         />
                     </div>
                     <button 
-                        className='button' 
-                        onClick={handleSubmit}>
-                        Guardar
+                        className={Button ? 'button-success button' : 'button'} 
+                        onClick={handleSubmit}
+                        disabled={Button}>
+                        {Button ? 'Guardado' : 'Guardar'}
                     </button>
+                    <Link 
+                        to={Button ? '/lista-regalos' : '#'}
+                        className={Button ? 'button-next button' : 'button'}
+                    >Siguiente</Link>
                 </div>
             </form>
         </div>

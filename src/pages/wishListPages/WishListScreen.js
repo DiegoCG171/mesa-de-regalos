@@ -7,9 +7,7 @@ import { WishListInfoForm} from '../../components/wishlist/WishListInfoForm'
 export const WishListScreen = ({history}) => {
 
     const ws = useSelector(state => state.wishList)
-    if(ws !== null){
-        history.replace('/');
-    }
+
 
     return (
         <div className='ws'>
