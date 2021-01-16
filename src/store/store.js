@@ -7,7 +7,7 @@ const { authReducer } = require("../reducers/authReducer");
 
 const reducers = combineReducers({
     auth: authReducer,
-    whishList: wishListReducer
+    wishList: wishListReducer
 });
 
 const composeEnhancers = (typeof window !== 'undefined' && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__) || compose;

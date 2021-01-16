@@ -50,15 +50,15 @@ export const WishListInfoForm = ({history}) => {
                     <select 
                         className='form-input'
                         name='tipoEvento'
-                        value={tipoEvento}
                         onChange={handleInputChange}
                     >
-                        <option value='boda'>Boda</option>
-                        <option value='xvanios'>XV Años</option>
-                        <option value='bautizo'>Bautizo</option>
-                        <option value='infantil'>Infantil</option>
-                        <option value='paraEl'>Para Él</option>
-                        <option value='paraElla'>Para Ella</option>
+                        <option defaultValue>Seleccione el tipo de evento</option>
+                        <option value='Boda'>Boda</option>
+                        <option value='XV Años'>XV Años</option>
+                        <option value='Bautizo'>Bautizo</option>
+                        <option value='Infantil'>Infantil</option>
+                        <option value='Para El'>Para Él</option>
+                        <option value='Para Ella'>Para Ella</option>
                     </select>
 
                     <label>Fecha del Evento: </label>
