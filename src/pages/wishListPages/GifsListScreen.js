@@ -7,9 +7,13 @@ import { getGiftByEvent } from '../../selector/getGiftByEvent'
 export const GifsListScreen = () => {
 
     const dispatch = useDispatch();
-    const  {tipoEvento}  = useSelector(state => state.wishList.newWishList);
+    const { newWishListInfo } = useSelector(state => state.whishList);
+
+    const { tipoEvento } = newWishListInfo;
+
     console.log(tipoEvento);
-    //const giftFiltered =  getGiftByEvent(tipoEvento);
+    const giftFiltered = getGiftByEvent(tipoEvento);
+    console.log(giftFiltered)
 
     return (
         <div className='gf'>
@@ -18,19 +22,20 @@ export const GifsListScreen = () => {
             <div className='gf-container'>
                 <div className='gf-target'>
                     <div className='img'>Foto</div>
-                        <div className='gf-info'>
-                            {
-                                // giftFiltered.map(gift => (
-                                //     <GiftList 
-                                //         gift={gift}
-                                //     />
-                                // ))
-                                
-                            }
-                        </div>
-                        <div className='gf-button'>
-                            <button>Agregar</button>
-                        </div>
+                    <div className='gf-info'>
+                        {
+                            giftFiltered.map(gift => (
+                                <GiftList
+                                    key={gift.id}
+                                    gift={gift}
+                                />
+                            ))
+
+                        }
+                    </div>
+                    <div className='gf-button'>
+                        <button>Agregar</button>
+                    </div>
                 </div>
             </div>
         </div>

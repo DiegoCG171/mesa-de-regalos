@@ -19,4 +19,9 @@ export const gifts = [
         nombre: 'Regalo2 2',
         tipoEvento: 'infantil'
     },
+    {
+        id: 5,
+        nombre: 'Regalo2 2',
+        tipoEvento: 'infantil'
+    },
 ]

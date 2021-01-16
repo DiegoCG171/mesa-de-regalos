@@ -5,7 +5,7 @@ export const GiftList = ({gift}) => {
     return (
         <div className='GiftList'>
             <div>
-                
+                Regalo!!!
             </div>
         </div>
     )
