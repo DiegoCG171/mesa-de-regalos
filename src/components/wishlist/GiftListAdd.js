@@ -11,10 +11,10 @@ export const GiftListAdd = () => {
             <h1>Lista regalos agregados</h1>
             {
                 gifts.map(gift => {
-                    <GiftList
+                    return (<GiftList
                         key = {gift.id} 
                         gift = {gift}
-                    />
+                    />)
                 })
             }
         </div>
