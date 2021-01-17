@@ -5,5 +5,5 @@ export const types = {
     logout: '[Auth] Logout',
     wishListInfoAdd: '[WishList] WishListInfoAdd',
     wishListAddGift: '[WishList] WishListAddGift',
-    wishListRemoveGift: '[WishList] WishListRemoveGift'
+    wishListDeleteGift: '[WishList] WishListDeleteGift'
 }

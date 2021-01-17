@@ -18,14 +18,12 @@ export const startAddGift = (gift) =>{
     }
 }
 
-export const removedGift = (gift) =>{
-    return{
-        type: types.wishListRemoveGift,
-        payload: {
-            removed
-        }
+ export const startDeleteGift = (gift) =>{
+     return{
+         type: types.wishListDeleteGift,
+         payload: gift.id
     }
-}
+ }
 
 // export const startRegisterFinalWishList = (WishListFinal) =>{
 //     return(dispatch) => {

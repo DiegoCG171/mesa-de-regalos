@@ -8,15 +8,16 @@
     }
 
     .gf-container{
-        margin: 50px;
+        margin: 70px;
         display: block;
         justify-content: center;
 
         .gf-info{
-            float: left;
-            width: 48%;
+            justify-content: center;
+            width: 100%;
             background-color: #cccccc;
             text-align: center;
+            padding: 10px;
 
             .titulo-gf-info{
                 text-align: center;
@@ -41,97 +42,76 @@
                     height: 100px;
                     margin: 5px;
                 }
-                
-                .gf-addButton, .gf-addButtonDis{
-                    font-size: 1rem;
-                    color: #ffffff;
-                    padding: 5px 20px;
-                    margin-top: 10px;
-                    margin-bottom: 5px;
-                    border: 1px solid #032d3a;
-                    border-radius: 4px;
-                    background: #093C4B;
-                    cursor: pointer;
-                    outline: none;
-                    text-decoration: none;
-                    text-align: center;
-                }
 
-                .gf-addButtonDis{
-                    background-color: green;
-                    border: 1px solid rgb(1, 59, 1);
-                }
-            }
-        }
+                .target-buttons{
+                    justify-content: space-between;
 
-        .gf-added{
-            float: right;
-            width: 48%;
-            background-color: #cccccc;
-            text-align: center;
+                    .gf-removeButton, .gf-removeButtonDis{
+                        font-size: 1rem;
+                        color: #ffffff;
+                        padding: 5px 20px;
+                        margin:10px;
+                        border: 1px solid #910202;
+                        border-radius: 4px;
+                        background: #cf0b0b;
+                        cursor: pointer;
+                        outline: none;
+                        text-decoration: none;
+                        text-align: center;
+                    }
 
-            .title-gf-added{
-                text-align: center;
-                font-size: 2rem;
-            }
+                    .gf-removeButtonDis{
+                        opacity: 0.5;
+                    }
+                    
+                    .gf-addButton, .gf-addButtonDis{
+                        font-size: 1rem;
+                        color: #ffffff;
+                        padding: 5px 20px;
+                        margin: 10px;
+                        border: 1px solid #032d3a;
+                        border-radius: 4px;
+                        background: #093C4B;
+                        cursor: pointer;
+                        outline: none;
+                        text-decoration: none;
+                        text-align: center;
+                    }
+    
+                    .gf-addButtonDis{
+                        background-color: green;
+                        border: 1px solid rgb(1, 59, 1);
+                    }
 
-            .gf-target{
-                font-size: 1rem;
-                background-color: white;
-                border-radius: 10px;
-                border: 1px solid #858585;
-                margin: 20px;
-                padding: 5px;
-
-                .gift-name{
-                    font-size: 1.5rem;
-                }
-
-                .gift-photo{
-                    margin: 5px;
-                    float: left;
-                    width: 100px;
-                    height: 100px;
-                }
-
-                .gift-name{
-                    font-size: 1.5rem;
-                }
-                
-                .gf-removeButton{
-                    font-size: 1rem;
-                    color: #ffffff;
-                    padding: 5px 20px;
-                    margin-top: 10px;
-                    margin-bottom: 10px;
-                    border: 1px solid #f71225;
-                    border-radius: 4px;
-                    background: #f32b3b;
-                    cursor: pointer;
-                    outline: none;
-                    text-decoration: none;
-                    text-align: center;
                 }
             }
-        }
-        
-        .hidden{
-            display: none;
         }
 
         .gf-button{
-            float: left;
-            margin-left: 46%;
+            margin-left: 45.5%;
 
             .gf-buttonSave{
-                font-size: 1.2rem;
+                font-size: 1rem;
                 color: #ffffff;
                 padding: 5px 20px;
-                margin-top: 10px;
-                margin-bottom: 5px;
+                margin: 10px;
                 border: 1px solid #032d3a;
                 border-radius: 4px;
                 background: #093C4B;
+                cursor: pointer;
+                outline: none;
+                text-decoration: none;
+                text-align: center;
+            }
+
+            .gf-buttonEnd{
+                font-size: 1rem;
+                color: #ffffff;
+                padding: 5px 20px;
+                margin:10px;
+                border: 1px solid #910202;
+                border-radius: 4px;
+                background: #cf0b0b;
                 cursor: pointer;
                 outline: none;
                 text-decoration: none;

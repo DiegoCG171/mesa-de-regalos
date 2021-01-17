@@ -1,6 +1,6 @@
 import { types } from "../types/types";
 
-const initialState = { newWishListInfo: null, giftAdded: [], giftRemoved: false };
+const initialState = { newWishListInfo: null, giftAdded: [] };
 
 export const wishListReducer = (state = initialState, action) => {
     switch (action.type) {
@@ -18,12 +18,12 @@ export const wishListReducer = (state = initialState, action) => {
                 giftAdded: [...state.giftAdded, action.payload]                
             }
 
-        case types.wishListRemoveGift:
-            return{
+        case types.wishListDeleteGift:
+            return {
                 ...state,
-                giftRemoved: action.payload
+                giftAdded: state.giftAdded.filter((gift) => gift.id !== action.payload )
             }
-    
+
         default:
             return state;
     }
