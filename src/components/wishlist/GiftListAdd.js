@@ -1,22 +1,23 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
-import { GiftList } from './GiftList';
+import { GiftsAdded } from './GiftsAdded';
 
 export const GiftListAdd = () => {
 
     const {giftAdded:gifts} = useSelector(state => state.wishList);
-    console.log(gifts);
     return (
-        <div>
-            <h1>Lista regalos agregados</h1>
+        <div className='gf-added'>
+            <h1 className='title-gf-added'>Lista regalos agregados</h1>
             {
                 gifts.map(gift => {
-                    return (<GiftList
+                    return (
+                    <GiftsAdded
                         key = {gift.id} 
-                        gift = {gift}
+                        gift = {gift} 
                     />)
                 })
             }
+            
         </div>
     )
 }

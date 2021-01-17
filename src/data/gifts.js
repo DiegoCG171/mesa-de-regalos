@@ -1,27 +1,28 @@
 export const gifts = [
     {
-        id: 1,
+        id: "1",
         nombre: 'Vasos Cristal',
-        tipoEvento: 'Boda'
+        tipoEvento: 'Boda',
+        
     },
     {
-        id: 2,
+        id: "2",
         nombre: 'Tupper',
-        tipoEvento: 'Boda'
+        tipoEvento: 'Boda',
     },
     {
-        id: 3,
+        id: "3",
         nombre: 'Regalo2 3',
-        tipoEvento: 'Boda'
+        tipoEvento: 'Boda',
     },
     {
-        id: 4,
+        id: "4",
         nombre: 'Regalo2 2',
-        tipoEvento: 'Infantil'
+        tipoEvento: 'Infantil',
     },
     {
-        id: 5,
+        id: "5",
         nombre: 'Regalo2 2',
-        tipoEvento: 'Infantil'
+        tipoEvento: 'Infantil',
     },
 ]

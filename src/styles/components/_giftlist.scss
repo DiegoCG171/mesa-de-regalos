@@ -2,16 +2,142 @@
     margin-top: 100px;
     align-content: center;
 
-    .title{
+    .titulo{
         text-align: center;
+        font-size: 2.5rem;
     }
 
     .gf-container{
         margin: 50px;
         display: block;
-        height: 50px;
-        width: 300px;
+        justify-content: center;
+
+        .gf-info{
+            float: left;
+            width: 48%;
+            background-color: #cccccc;
+            text-align: center;
+
+            .titulo-gf-info{
+                text-align: center;
+                font-size: 2rem;
+            }
+
+            .gf-target{
+                font-size: 1rem;
+                background-color: white;
+                border-radius: 10px;
+                border: 1px solid #858585;
+                margin: 20px;
+                padding: 5px;
+
+                .gift-name{
+                    font-size: 1.5rem;
+                }
+
+                .gift-photo{
+                    float: left;
+                    width: 100px;
+                    height: 100px;
+                    margin: 5px;
+                }
+                
+                .gf-addButton, .gf-addButtonDis{
+                    font-size: 1rem;
+                    color: #ffffff;
+                    padding: 5px 20px;
+                    margin-top: 10px;
+                    margin-bottom: 5px;
+                    border: 1px solid #032d3a;
+                    border-radius: 4px;
+                    background: #093C4B;
+                    cursor: pointer;
+                    outline: none;
+                    text-decoration: none;
+                    text-align: center;
+                }
+
+                .gf-addButtonDis{
+                    background-color: green;
+                    border: 1px solid rgb(1, 59, 1);
+                }
+            }
+        }
+
+        .gf-added{
+            float: right;
+            width: 48%;
+            background-color: #cccccc;
+            text-align: center;
+
+            .title-gf-added{
+                text-align: center;
+                font-size: 2rem;
+            }
+
+            .gf-target{
+                font-size: 1rem;
+                background-color: white;
+                border-radius: 10px;
+                border: 1px solid #858585;
+                margin: 20px;
+                padding: 5px;
+
+                .gift-name{
+                    font-size: 1.5rem;
+                }
+
+                .gift-photo{
+                    margin: 5px;
+                    float: left;
+                    width: 100px;
+                    height: 100px;
+                }
+
+                .gift-name{
+                    font-size: 1.5rem;
+                }
+                
+                .gf-removeButton{
+                    font-size: 1rem;
+                    color: #ffffff;
+                    padding: 5px 20px;
+                    margin-top: 10px;
+                    margin-bottom: 10px;
+                    border: 1px solid #f71225;
+                    border-radius: 4px;
+                    background: #f32b3b;
+                    cursor: pointer;
+                    outline: none;
+                    text-decoration: none;
+                    text-align: center;
+                }
+            }
+        }
         
+        .hidden{
+            display: none;
+        }
+
+        .gf-button{
+            float: left;
+            margin-left: 46%;
+
+            .gf-buttonSave{
+                font-size: 1.2rem;
+                color: #ffffff;
+                padding: 5px 20px;
+                margin-top: 10px;
+                margin-bottom: 5px;
+                border: 1px solid #032d3a;
+                border-radius: 4px;
+                background: #093C4B;
+                cursor: pointer;
+                outline: none;
+                text-decoration: none;
+                text-align: center;
+            }
+        }
+
     }
-    
 }

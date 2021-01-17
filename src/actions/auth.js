@@ -13,8 +13,6 @@ export const login = (uid, displayName, photoURL) => {
     }
 }
 
-
-
 export const startLoginGoogle = () => {
     return (dispatch) => {
 
@@ -51,7 +49,6 @@ export const startRegisterWhithEmailAndPassword = (email, name, password) => {
 export const startLogout = () => {
     return async(dispatch) => {
         await firebase.auth().signOut();
-
         dispatch(logout());
     }
 }
