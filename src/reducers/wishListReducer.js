@@ -23,6 +23,13 @@ export const wishListReducer = (state = initialState, action) => {
                 ...state,
                 giftAdded: state.giftAdded.filter((gift) => gift.id !== action.payload )
             }
+        
+        case types.dataCleaning:
+            return {
+                ...state,
+                giftAdded: [],
+                newWishListInfo: {}
+            }
 
         default:
             return state;

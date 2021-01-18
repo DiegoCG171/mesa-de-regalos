@@ -1,31 +1,31 @@
 import React, { useState } from 'react'
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import Swal from 'sweetalert2';
+import { startRegisterFinalWishList } from '../../actions/wishList';
 import { Navbar } from '../../components/ui/Navbar'
 import { GiftList } from '../../components/wishlist/GiftList';
 import { getGiftByEvent } from '../../selector/getGiftByEvent'
 
 export const GifsListScreen = () => {
 
+    const dispatch = useDispatch();
+
+    const [check, setCheck] = useState(false);
 
     const { newWishListInfo } = useSelector(state => state.wishList);
     const { tipoEvento } = newWishListInfo;
-    const {giftAdded:gifts} = useSelector(state => state.wishList);
 
     const giftFiltered = getGiftByEvent(tipoEvento);
     
     const handleSubmit = (ev) =>{
         ev.preventDefault();
-        const WishListFinal = {newWishListInfo, gifts};
-        console.log('ListaFinal:')
-        console.log(WishListFinal); 
-        Swal.fire("¡Registrada!", `La Wish List ${newWishListInfo.nombre} ha sido registrada correctamente`, 'success');
+        setCheck(true);
+        dispatch(startRegisterFinalWishList());
     }
 
     return (
         <div className='gf'>
-            <h1 className='titulo'>Crea tu Wish List</h1>
+            <h1 className='titulo'>CREA TU WISH LIST</h1>
             <Navbar />
             <div className='gf-container'>
                 <div className='gf-info'>
@@ -41,8 +41,10 @@ export const GifsListScreen = () => {
                     }
                 </div>
                 <div className='gf-button'>
-                    <button className='gf-buttonSave'
+                    <button 
+                        className={check ? 'gf-buttonSaveDis' : 'gf-buttonSave'}
                         onClick={handleSubmit}
+                        disabled={check}
                     >Guardar</button>
                     <Link to='/' className='gf-buttonEnd'>Finalizar</Link>
                 </div>

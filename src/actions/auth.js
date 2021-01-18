@@ -4,7 +4,7 @@ import { firebase, googleProvider } from '../firestore/firebase-config';
 
 export const login = (uid, displayName, photoURL) => {
     return {
-        type: types.login,
+        type: types.login, 
         payload: {
             uid,
             displayName,

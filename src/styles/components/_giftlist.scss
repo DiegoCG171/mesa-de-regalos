@@ -8,16 +8,21 @@
     }
 
     .gf-container{
-        margin: 70px;
-        display: block;
+        margin: 50px;
+        display: flex;
+        flex-direction: column;
         justify-content: center;
+        align-items: center;
 
         .gf-info{
             justify-content: center;
-            width: 100%;
+            width: 80%;
+            height: 50vh;
             background-color: #cccccc;
             text-align: center;
             padding: 10px;
+            overflow: auto;
+            margin-bottom: 10px;
 
             .titulo-gf-info{
                 text-align: center;
@@ -88,9 +93,9 @@
         }
 
         .gf-button{
-            margin-left: 45.5%;
+            justify-content: space-evenly;
 
-            .gf-buttonSave{
+            .gf-buttonSave, .gf-buttonSaveDis{
                 font-size: 1rem;
                 color: #ffffff;
                 padding: 5px 20px;
@@ -102,6 +107,10 @@
                 outline: none;
                 text-decoration: none;
                 text-align: center;
+            }
+
+            .gf-buttonSaveDis{
+                opacity: 0.5;
             }
 
             .gf-buttonEnd{
