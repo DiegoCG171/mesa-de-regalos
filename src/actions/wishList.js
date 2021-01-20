@@ -41,7 +41,7 @@ export const startRegisterFinalWishList = () =>{
         console.log(wishListFinished);
         await db.collection(`${uid}/whisList/lists`)
             .add(wishListFinished)
-        Swal.fire('¡Registrada!', 'Tu lista de regalos se ha guardado satisfactoriamente', 'success');
+        Swal.fire('¡Registrada!', 'Tu lista de regalos se ha guardado satisfactoriamente', 'success'); 
         dispatch(dataCleaning());
     }
 }
