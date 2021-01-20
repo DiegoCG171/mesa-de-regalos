@@ -1,6 +1,6 @@
 import { types } from "../types/types";
 
-const initialState = { newWishListInfo: null, giftAdded: [] };
+const initialState = { newWishListInfo: null, giftAdded: [], wishListFirebase: null, wishListGetted: null }; 
 
 export const wishListReducer = (state = initialState, action) => {
     switch (action.type) {
@@ -15,7 +15,7 @@ export const wishListReducer = (state = initialState, action) => {
 
             return{
                 ...state,
-                giftAdded: [...state.giftAdded, action.payload]                
+                giftAdded: [...state.giftAdded, action.payload]                      
             }
 
         case types.wishListDeleteGift:
@@ -27,8 +27,19 @@ export const wishListReducer = (state = initialState, action) => {
         case types.dataCleaning:
             return {
                 ...state,
-                giftAdded: [],
-                newWishListInfo: {}
+                giftAdded: []
+            }
+
+        case types.wishListFirebase:
+            return{
+                ...state,    
+                wishListFirebase: action.payload
+            }
+
+        case types.wishListAddGiftGetted:
+            return{
+                ...state,
+                wishListGetted: action.payload
             }
 
         default:

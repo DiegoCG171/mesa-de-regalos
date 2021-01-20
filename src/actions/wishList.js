@@ -20,6 +20,13 @@ export const startAddGift = (gift) =>{
     }
 }
 
+export const startAddGiftGetted = (gift) =>{
+    return{
+        type: types.wishListAddGiftGetted,
+        payload: gift
+    }
+}
+
  export const startDeleteGift = (gift) =>{
      return{
          type: types.wishListDeleteGift,
@@ -39,9 +46,43 @@ export const startRegisterFinalWishList = () =>{
     }
 }
 
-const dataCleaning = () =>{
+export const dataCleaning = () =>{
     return {
-        type: types.dataCleaning,
+        type: types.dataCleaning,    
 
+    }
+}
+
+export const showGiftsByUid = () =>{
+    return (dispatch, getState) =>{
+        const {auth: {uid}} = getState();
+        db.collection(`${uid}/whisList/lists`).onSnapshot((snapshot) => {
+            const lists = [];
+            snapshot.forEach( (snap) => {
+                lists.push({
+                    id: snap.id,
+                    ...snap.data()
+                });
+            });
+            dispatch(addGettedLists(lists));
+            console.log(lists);
+        });
+    }
+}
+
+export const addGettedLists = (lists) =>{
+    return{
+        type: types.wishListFirebase,
+        payload: {
+            lists
+        }
+    }
+}
+
+export const deleteWishList = (id) =>{
+    return(dispatch, getState) =>{
+        const {auth: {uid}} = getState();
+        db.collection(`${uid}/whisList/lists`).doc(id).delete()
+            .then(Swal.fire('Eliminado', 'Se ha eliminado de manera correcta la wish list', 'success'));
     }
 }

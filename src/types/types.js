@@ -6,5 +6,7 @@ export const types = {
     wishListInfoAdd: '[WishList] WishListInfoAdd',
     wishListAddGift: '[WishList] WishListAddGift',
     wishListDeleteGift: '[WishList] WishListDeleteGift',
-    dataCleaning: '[WishList] dataCleaning'
+    dataCleaning: '[WishList] dataCleaning',
+    wishListFirebase: '[WishList] wishListFirebase',
+    wishListAddGiftGetted: '[WishList] wishListAddGiftGetted'
 }

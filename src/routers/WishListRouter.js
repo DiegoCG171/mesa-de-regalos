@@ -3,6 +3,7 @@ import { Redirect, Route, Switch } from 'react-router-dom'
 import { MainScreen } from '../pages/main/MainScreen'
 import { GifsListScreen } from '../pages/wishListPages/GifsListScreen'
 import { MyWishListScreen } from '../pages/wishListPages/MyWishListScreen'
+import { WishListGettedScreen } from '../pages/wishListPages/WishListGettedScreen'
 import { WishListScreen } from '../pages/wishListPages/WishListScreen'
 
 export const WishListRouter = () => {
@@ -12,8 +13,9 @@ export const WishListRouter = () => {
             <Route exact path='/info' component={WishListScreen}/>
             <Route exact path='/lista-regalos' component={GifsListScreen}/>
             <Route exact path='/mis-listas'component={MyWishListScreen} />
+            <Route exact path='/regalos' component={WishListGettedScreen}/>
             <Redirect to='/' />
         </Switch>
-    )
+    ) 
 }
 

@@ -17,7 +17,7 @@
         .gf-info{
             justify-content: center;
             width: 80%;
-            height: 50vh;
+            height: 55vh;
             background-color: #cccccc;
             text-align: center;
             padding: 10px;
@@ -46,6 +46,12 @@
                     width: 100px;
                     height: 100px;
                     margin: 5px;
+                }
+
+                .gift-photo-giftDefault{
+                    width: 70px;
+                    height: 70px;
+                    margin: 3px;
                 }
 
                 .target-buttons{
@@ -94,6 +100,7 @@
 
         .gf-button{
             justify-content: space-evenly;
+            margin-top: 20px;
 
             .gf-buttonSave, .gf-buttonSaveDis{
                 font-size: 1rem;
