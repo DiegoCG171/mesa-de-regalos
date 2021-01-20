@@ -26,10 +26,14 @@ export const WishListInfoForm = ({history}) => {
 
     const handleSubmit = (ev) =>{
         ev.preventDefault();
-        const InfoWishList = {nombre, tipoEvento, fecha, calle, colonia, cp, telefono, interior, exterior} 
-        dispatch(registarWishList(InfoWishList));
-        Swal.fire("Guardado", "La información ha sido guardada de forma correcta", 'success');
-        setButton(true);
+        if(nombre === "" || tipoEvento === " " || fecha === "" || calle === "" || cp === "" || colonia === "" || telefono === ""){
+            Swal.fire("Error", "Los campos obligatorios deben de ser llenados", "error");
+        }else{
+            const InfoWishList = {nombre, tipoEvento, fecha, calle, colonia, cp, telefono, interior, exterior} 
+            dispatch(registarWishList(InfoWishList));
+            Swal.fire("Guardado", "La información ha sido guardada de forma correcta", 'success');
+            setButton(true);
+        }
     }
 
     return (
@@ -37,7 +41,7 @@ export const WishListInfoForm = ({history}) => {
             <form className='wsf-form'>
                 <div className='wsf-form-evento'>
                     <h2 className='titulo'>Información del Evento</h2>
-                    <label>Nombra tu Wish List:</label>
+                    <label>Nombra tu Wish List: *</label>
                     <input
                         className='form-input'
                         name='nombre'
@@ -46,7 +50,7 @@ export const WishListInfoForm = ({history}) => {
                         onChange={handleInputChange}
                     />
 
-                    <label>Tipo de Evento:</label>
+                    <label>Tipo de Evento: *</label>
                     <select 
                         className='form-input'
                         name='tipoEvento'
@@ -54,14 +58,14 @@ export const WishListInfoForm = ({history}) => {
                     >
                         <option defaultValue>Seleccione el tipo de evento</option>
                         <option value='Boda'>Boda</option>
-                        <option value='XV Años'>XV Años</option>
+                        <option value='XV años'>XV Años</option>
                         <option value='Bautizo'>Bautizo</option>
                         <option value='Infantil'>Infantil</option>
-                        <option value='Para El'>Para Él</option>
+                        <option value='Para Él'>Para Él</option>
                         <option value='Para Ella'>Para Ella</option>
                     </select>
 
-                    <label>Fecha del Evento: </label>
+                    <label>Fecha del Evento *: </label>
                     <input
                         className='form-input'
                         name='fecha'
@@ -72,7 +76,7 @@ export const WishListInfoForm = ({history}) => {
                 </div>
                 <div className='wsf-form-contacto'> 
                     <h2 className='titulo'>Información de contacto y envío</h2>
-                    <label>Calle</label>
+                    <label>Calle: *</label>
                     <input
                         className='form-input'
                         name='calle'
@@ -80,7 +84,7 @@ export const WishListInfoForm = ({history}) => {
                         value={calle}
                         onChange={handleInputChange}
                     />
-                    <label>Colonia</label>
+                    <label>Colonia: *</label>
                     <input
                         className='form-input'
                         name='colonia'
@@ -89,7 +93,7 @@ export const WishListInfoForm = ({history}) => {
                         onChange={handleInputChange}
                     />
                     <div className='input-small'>
-                        <label>Código Postal</label>
+                        <label>Código Postal: *</label>
                         <input
                             className='form-input-small'
                             name='cp'
@@ -97,7 +101,7 @@ export const WishListInfoForm = ({history}) => {
                             value={cp}
                             onChange={handleInputChange}
                         />
-                        <label className='label-fon'>Télefono</label>
+                        <label className='label-fon'>Télefono: *</label>
                         <input
                             className='form-input-small'
                             name='telefono'
@@ -107,7 +111,7 @@ export const WishListInfoForm = ({history}) => {
                         />
                     </div>
                     <div className='input-small-number'>
-                        <label># Interior</label>
+                        <label># Interior:</label>
                         <input
                             className='form-input-small'
                             name= 'interior'
@@ -115,7 +119,7 @@ export const WishListInfoForm = ({history}) => {
                             value={interior}
                             onChange={handleInputChange}
                         />
-                        <label># Exterior</label>
+                        <label># Exterior:</label>
                         <input
                             className='form-input-small'
                             name='exterior'
@@ -127,7 +131,8 @@ export const WishListInfoForm = ({history}) => {
                     <button 
                         className={Button ? 'button-success button' : 'button'} 
                         onClick={handleSubmit}
-                        disabled={Button}>
+                        disabled={Button}
+                        type='submit'>
                         {Button ? 'Guardado' : 'Guardar'}
                     </button>
                     <Link 

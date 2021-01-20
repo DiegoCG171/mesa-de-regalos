@@ -3,17 +3,14 @@
 
     .wsf-container{
         font-size: 1.2rem;
-        align-items: center;
         display: block;
-        justify-content: center;
-        padding: 40px;
-        margin-top: 20px;
+        padding: 20px;
         width: 80%;
     
-        .wsf-form-evento{   
-            float: left; 
+        .wsf-form-evento{
             display: flex;
-            flex-direction: column;
+            flex-direction: column;   
+            float: left;
             width: 40%;
 
             .titulo{
@@ -30,7 +27,7 @@
                 padding: 8px 15px;
                 font-size: 1rem;
                 outline: none;
-                width: 400px;
+                width: 100%;
             }
 
             .button-back{
@@ -53,7 +50,7 @@
             float: right;
             display: flex;
             flex-direction: column;
-            width: 40%;
+            width: 45%;
 
             .titulo{
                 text-align: center;
@@ -69,17 +66,14 @@
                 padding: 8px 15px;
                 font-size: 1rem;
                 outline: none;
-                width: 400px;
+                width: 100%;
             }
 
             .input-small, .input-small-number{
                 font-size: 1.1rem;
                 
                 label{
-                    padding: 12px;
-                }
-                .label-fon{
-                   padding: 18px;
+                    padding: 3%;
                 }
 
                 .form-input-small{
@@ -91,15 +85,15 @@
                     padding: 10px 15px;
                     font-size: 1rem;
                     outline: none;
-                    width: 100px;
+                    width: 25%;
                 }
             }
 
             .input-small-number{
-                margin-left: 18px;
+                margin-left: 2%;
 
                 label{
-                    padding: 15px;
+                    padding: 5%;
                 }
             }
 
